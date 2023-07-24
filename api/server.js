@@ -5,12 +5,9 @@ require("dotenv").config();
 
 const PORT = process.env.PORT ?? 5174;
 const app = express();
-const corsOptions = {
-  origin: "https://mern-todo-list-client.vercel.app/",
-};
 
 app.use(express.json());
-app.use(cors(corsOptions));
+app.use(cors());
 
 mongoose
   .connect(process.env.M0NGODB_URI, {
