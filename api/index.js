@@ -7,7 +7,11 @@ const PORT = process.env.PORT ?? 5174;
 const app = express();
 
 app.use(express.json());
-app.use(cors());
+app.use(
+  cors({
+    origin: process.env.CLIENT_URI,
+  })
+);
 
 mongoose
   .connect(process.env.M0NGODB_URI, {
