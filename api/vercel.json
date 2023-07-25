@@ -1,9 +1,4 @@
 {
-  "functions": {
-    "*.js": {
-      "runtime": "@vercel/node"
-    }
-  },
   "routes": [
     {
       "src": "/(.*)",
